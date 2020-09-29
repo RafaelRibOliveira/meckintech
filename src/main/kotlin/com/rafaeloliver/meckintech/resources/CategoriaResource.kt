@@ -1,5 +1,6 @@
 package com.rafaeloliver.meckintech.resources
 
+import com.rafaeloliver.meckintech.domain.CategoriaDomain
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -9,5 +10,13 @@ import org.springframework.web.bind.annotation.RestController
 class CategoriaResource {
 
     @GetMapping
-    fun listar() = "REST está funcionando"
+    fun listar(): MutableList<CategoriaDomain> {
+        val cat1 = CategoriaDomain(1, "Informática")
+        val cat2 = CategoriaDomain(2, "Escritório")
+
+        val lista = mutableListOf(cat1, cat2)
+
+        return lista
+
+    }
 }
