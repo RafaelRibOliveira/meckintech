@@ -20,6 +20,8 @@ class CategoriaResource (
     fun findById(@PathVariable id: Long): ResponseEntity<Categoria> {
 
 
+
+
         return ResponseEntity(this.service.buscar(id), HttpStatus.OK)
 
     }

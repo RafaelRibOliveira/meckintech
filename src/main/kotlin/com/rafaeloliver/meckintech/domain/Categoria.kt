@@ -5,9 +5,9 @@ import javax.persistence.*
 
 
 @Entity
-class Categoria (
+class Categoria(
 
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-        var id: Long,
+        var id: Long? = null,
         var name: String
 )
